@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Street Chick Enterprise</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(76, 175, 80, 0.8);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .products-grid, .egg-grid, .chicken-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card, .egg-card, .chicken-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: white;
+            text-align: center;
+        }
+
+        .product-card img, .egg-card img, .chicken-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover, .egg-card:hover, .chicken-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card:hover img, .egg-card:hover img, .chicken-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .product-card h3, .egg-card p, .chicken-card p {
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        footer {
+            background-color: rgba(76, 175, 80, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        footer img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                margin: 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="logo.PNG" alt="First Street Chick Enterprise Logo">
+        <div>
+            <h1>First Street Chick Enterprise</h1>
+            <p>We're the best chicken shop in town!</p>
+        </div>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <input type="text" placeholder="Search..." style="padding: 5px; margin-left: 15px; border-radius: 5px; border: 1px solid #ddd;">
+    </nav>
+
+    <!-- Hero Section -->
+    <section style="text-align: center; padding: 50px; background: rgba(0, 0, 0, 0.5); color: white;">
+        <h1>Welcome to First Street Chick Enterprise</h1>
+        <p>Fresh, locally sourced chicken products delivered to your doorstep.</p>
+        <a href="#products" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Explore Our Products</a>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            First Street Chick Enterprise is a family-owned, locally-sourced chicken farm located in Kabarnet, Kenya. We specialize in providing fresh, high-quality chicken products to our customers, offering a variety of meat options, such as breasts, thighs, and drumsticks.
+        </p>
+        <p>
+            Our farmers and employees are committed to creating a culture of love, respect, and sustainability. We strive to provide our customers with the best possible chicken products.
+        </p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" style="padding: 20px; text-align: center;">
+        <h2>Our Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="chicken-breast.jpg" alt="Chicken Breast">
+                <h3>Chicken Breast</h3>
+                <p>Price: $10.00</p>
+            </div>
+            <div class="product-card">
+                <img src="eggs.jpg" alt="Eggs">
+                <h3>Fresh Eggs</h3>
+                <p>Price: $5.00/dozen</p>
+            </div>
+            <div class="product-card">
+                <img src="chicken-feed.jpg" alt="Chicken Feed">
+                <h3>Chicken Feed</h3>
+                <p>Price: $20.00/bag</p>
+            </div>
+            <div class="product-card">
+                <img src="chicken-equipment.jpg" alt="Chicken Equipment">
+                <h3>Chicken Equipment</h3>
+                <p>Price: $50.00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Egg Varieties Section -->
+    <section id="egg-varieties" style="padding: 20px; text-align: center;">
+        <h2>Explore Our Egg Varieties</h2>
+        <div class="egg-grid">
+            <div class="egg-card">
+                <img src="egg4.JPG" alt="Egg Variety 1">
+                <p>Egg Variety 1</p>
+            </div>
+            <div class="egg-card">
+                <img src="egg5.JPG" alt="Egg Variety 2">
+                <p>Egg Variety 2</p>
+            </div>
+            <div class="egg-card">
+                <img src="egg7.JPG" alt="Egg Variety 3">
+                <p>Egg Variety 3</p>
+            </div>
+            <div class="egg-card">
+                <img src="eggs.JPG" alt="Egg Variety 4">
+                <p>Egg Variety 4</p>
+            </div>
+            <div class="egg-card">
+                <img src="eggs2.JPG" alt="Egg Variety 5">
+                <p>Egg Variety 5</p>
+            </div>
+            <div class="egg-card">
+                <img src="eggs3.JPG" alt="Egg Variety 6">
+                <p>Egg Variety 6</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Chickens Section -->
+    <section id="meet-chickens" style="padding: 20px; text-align: center;">
+        <h2>Meet Our Chickens</h2>
+        <div class="chicken-grid">
+            <div class="chicken-card">
+                <img src="chicken variety 1.JPG" alt="Chicken Variety 1">
+                <p>Chicken Variety 1</p>
+            </div>
+            <div class="chicken-card">
+                <img src="chicken variety 2.JPG" alt="Chicken Variety 2">
+                <p>Chicken Variety 2</p>
+            </div>
+            <div class="chicken-card">
+                <img src="chicken variety 3.JPG" alt="Chicken Variety 3">
+                <p>Chicken Variety 3</p>
+            </div>
+            <div class="chicken-card">
+                <img src="chicken variety 4.JPG" alt="Chicken Variety 4">
+                <p>Chicken Variety 4</p>
+            </div>
+            <div class="chicken-card">
+                <img src="chicken variety 5.JPG" alt="Chicken Variety 5">
+                <p>Chicken Variety 5</p>
+            </div>
+            <div class="chicken-card">
+                <img src="chicken variety 6.JPG" alt="Chicken Variety 6">
+                <p>Chicken Variety 6</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: 0101013156</p>
+        <p>Email: <a href="mailto:info@firststreetchickenterprise.com">info@firststreetchickenterprise.com</a></p>
+        <p>Address: 31-30400 Kaptimbor, Kabarnet, Baringo, Kenya</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d800.0115237928551!2d35.731475247823525!3d0.4975938737848245!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2ske!4v1743162106890!5m2!1sen!2ske" 
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 First Street Chick Enterprise. All rights reserved.</p>
+        <p>Follow us on:</p>
+        <a href="https://www.facebook.com/FirstStreetChickEnterprise/" target="_blank">
+            <img src="logos/facebook-logo.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/firststreetchickenterprise/" target="_blank">
+            <img src="logos/instagram-logo.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com/FirstStreetChickEnterprise/" target="_blank">
+            <img src="logos/twitter-logo.png" alt="Twitter">
+        </a>
+        <a href="https://www.pinterest.com/firststreetchickenterprise/" target="_blank">
+            <img src="logos/pinterest-logo.png" alt="Pinterest">
+        </a>
+        <a href="https://www.youtube.com/channel/UCYhU3zY2g754z62k-07Xw7Q" target="_blank">
+            <img src="logos/youtube-logo.png" alt="YouTube">
+        </a>
+        <a href="https://www.linkedin.com/company/first-street-chick-enterprise/" target="_blank">
+            <img src="logos/linkedin-logo.png" alt="LinkedIn">
+        </a>
+    </footer>
+</body>
+</html>
